@@ -1,0 +1,306 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #102a43;
+    color: white;
+}
+
+.navbar h2 {
+    color: #20c997;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    color: white;
+    background: linear-gradient(120deg, #102a43, #247ba0);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Search Form */
+
+.search-box {
+    background: white;
+    max-width: 1000px;
+    margin: -35px auto 50px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #0002;
+    position: relative;
+}
+
+#bookingForm {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: end;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: white;
+}
+
+button {
+    background: #20a879;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #16845e;
+}
+
+#searchMessage {
+    color: #d93025;
+    margin-top: 12px;
+}
+
+/* Rooms */
+
+.rooms {
+    padding: 20px 8% 60px;
+}
+
+.rooms h2, .about h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    max-width: 450px;
+    margin: 0 auto 30px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.room-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #0001;
+    transition: 0.3s;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+.room-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.room-info {
+    padding: 18px;
+}
+
+.room-info h3 {
+    margin-bottom: 10px;
+}
+
+.room-info p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #16845e;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.amenities {
+    font-size: 13px;
+    line-height: 2;
+}
+
+.book-btn {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* About */
+
+.about {
+    background: #e8f3f0;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.about p {
+    color: #555;
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #0009;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.modal-content button {
+    margin-top: 10px;
+}
+
+.modal-content #confirmBtn {
+    width: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    color: #333;
+    font-size: 25px;
+    padding: 0 8px;
+}
+
+/* Footer */
+
+footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .search-box {
+        margin: -20px 15px 35px;
+    }
+
+    #bookingForm {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .room-card img {
+        height: 140px;
+    }
+
+    .room-info {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar nav {
+        gap: 8px;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #bookingForm {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+}
